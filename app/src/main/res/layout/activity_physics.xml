@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_View"
+    android:background="@color/tan_background"
+    tools:context="com.example.android.popquiz.MathActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/physics_question1View"
+                    android:background="@color/category_numbers"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question 1"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="50dp"
+                        style="@style/CategoryStyle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/physics_question1"
+                        android:textSize="15dp"
+                        android:layout_margin="16dp"
+                        style="@style/CategoryStyle"/>
+
+                    <RadioGroup
+                        android:id="@+id/pradio_group1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q1a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Potential energy"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q1a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total energy"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+                        <RadioButton
+                            android:id="@+id/pradio_button_q1a3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperature"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q1a4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Average kinetic energy"
+                            style="@style/CategoryStyle"
+                            android:layout_margin="4dp"
+                            />
+
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/question2View"
+                    android:layout_margin="16dp"
+                    android:background="@color/category_numbers"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question 2"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="50dp"
+                        style="@style/CategoryStyle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/physics_question2"
+                        android:textSize="15dp"
+                        android:layout_margin="16dp"
+                        style="@style/CategoryStyle"/>
+
+                    <RadioGroup
+                        android:id="@+id/pradio_group2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q2a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Combustion"
+                            android:padding="16dp"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"/>
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q2a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Compression"
+                            android:padding="16dp"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+                        <RadioButton
+                            android:id="@+id/pradio_button_q2a3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sublimation"
+                            android:padding="16dp"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q2a4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Evaporation"
+                            android:padding="16dp"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/physics_question3View"
+                    android:background="@color/category_numbers"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question 3"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="50dp"
+                        style="@style/CategoryStyle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/physics_question3"
+                        android:textSize="15dp"
+                        android:layout_margin="16dp"
+                        style="@style/CategoryStyle"/>
+
+                    <RadioGroup
+                        android:id="@+id/pradio_group3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q3a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Decreasing"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q3a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Increasing"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+                        <RadioButton
+                            android:id="@+id/pradio_button_q3a3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kinetic"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q3a4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="D. Potential"
+                            style="@style/CategoryStyle"
+                            android:layout_margin="4dp"
+                            />
+
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/physics_question4View"
+                    android:background="@color/category_numbers"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question 4"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="50dp"
+                        style="@style/CategoryStyle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/physics_question4"
+                        android:textSize="15dp"
+                        android:layout_margin="16dp"
+                        style="@style/CategoryStyle"/>
+
+                    <RadioGroup
+                        android:id="@+id/pradio_group4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q4a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Decrease, rise"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q4a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Increases, falls"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+                        <RadioButton
+                            android:id="@+id/pradio_button_q4a3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Increases, rises"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q4a4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Decrease, falls"
+                            style="@style/CategoryStyle"
+                            android:layout_margin="4dp"
+                            />
+
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/physics_question5View"
+                    android:background="@color/category_numbers"
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question 5"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="50dp"
+                        style="@style/CategoryStyle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/physics_question5"
+                        android:textSize="15dp"
+                        android:layout_margin="16dp"
+                        style="@style/CategoryStyle"/>
+
+                    <RadioGroup
+                        android:id="@+id/pradio_group5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q5a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Condensation"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q5a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Convection"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+                        <RadioButton
+                            android:id="@+id/pradio_button_q5a3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Radiation"
+                            android:layout_margin="4dp"
+                            style="@style/CategoryStyle"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/pradio_button_q5a4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Conduction"
+                            style="@style/CategoryStyle"
+                            android:layout_margin="4dp"
+                            />
+
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/scoreView"
+                android:background="@color/category_numbers"
+                android:layout_margin="16dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Final Score"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:textSize="50dp"
+                    style="@style/CategoryStyle"/>
+
+                <TextView
+                    android:id="@+id/final_pscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:textSize="100dp"
+                    style="@style/CategoryStyle"/>
+
+                <TextView
+                    android:id="@+id/message_final"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CategoryStyle"
+                    android:layout_gravity="center"
+                    android:textSize="50dp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+</LinearLayout>
+
+
+
+

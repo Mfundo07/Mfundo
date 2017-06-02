@@ -1,0 +1,33 @@
+
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Mfundo</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_english">English</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_colors">Mathematics</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_numbers">Physical Sciences</string>
+    <string name="maths_question1"> The average of first 50 natural numbers is …………. .</string>
+    <string name="maths_question2">A fraction which bears the same ratio to 1/27 as 3/11 bear to 5/9 is equal to ……….. .</string>
+    <string name="maths_question3"> The number of 3-digit numbers divisible by 6, is ………….. .</string>
+    <string name="maths_question4">What is 1004 divided by 2?</string>
+    <string name="maths_question5">A clock strikes once at 1 o’clock, twice at 2 o’clock, thrice at
+        3 o’clock and so on.How many times will it strike in 24 hours?
+    </string>
+    <string name="physics_question1">Thermal energy is the __________ of the particles in a material. </string>
+    <string name="physics_question2">Refrigerators use the process of __________ to remove heat from the interiors.</string>
+    <string name="physics_question3">The moving particles in an object have __________ energy.</string>
+    <string name="physics_question4">If the particles in an object begin to move more quickly, their average kinetic energy __________ and the object\'s temperature __________.</string>
+    <string name="physics_question5">The opposite of evaporation is __________.</string>
+
+    <string name="english_question1">How many people ___ in your family? </string>
+    <string name="english_question2">What time is it?</string>
+    <string name="english_question3">I get up at 8 o\'clock ___ morning.</string>
+    <string name="english_question4">How much _____ where you live?</string>
+    <string name="english_question5">Where are you going __ Friday?</string>
+</resources>
+
