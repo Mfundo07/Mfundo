@@ -47,7 +47,7 @@
                         style="@style/CategoryStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/physics_question1"
+                        android:text="@string/physics_question4"
                         android:gravity="center"
                         android:textSize="16sp"
                         android:padding="16dp"
@@ -76,7 +76,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="Potential Energy"
+                                android:text="Decreases, rises"
                                 android:layout_gravity="center"
                                 android:layout_margin="16dp"
 
@@ -94,7 +94,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_width="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Total energy    "
+                                android:text="Increases, falls"
                                 android:layout_margin="16dp"
                                 android:layout_gravity="center"/>
                         </LinearLayout>
@@ -120,7 +120,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Temperature    "
+                                android:text="Increases, rises"
                                 android:layout_margin="16dp"
                                 android:layout_gravity="center"
                                 />
@@ -136,7 +136,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="Average kinetic energy"
+                                android:text="Decreases, falls"
                                 android:gravity="center"
                                 android:layout_margin="16dp" />
 
@@ -180,7 +180,7 @@
                         style="@style/CategoryStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/physics_question1"
+                        android:text="@string/physics_question3"
                         android:gravity="center"
                         android:textSize="16sp"
                         android:padding="16dp"
@@ -209,7 +209,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="Potential Energy"
+                                android:text="    Decreases    "
                                 android:layout_gravity="center"
                                 android:layout_margin="16dp"
 
@@ -227,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_width="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Total energy    "
+                                android:text="    Increases    "
                                 android:layout_margin="16dp"
                                 android:layout_gravity="center"/>
                         </LinearLayout>
@@ -253,7 +253,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Temperature    "
+                                android:text="    Kinetic    "
                                 android:layout_margin="16dp"
                                 android:layout_gravity="center"
                                 />
@@ -269,7 +269,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="Average kinetic energy"
+                                android:text="    Potential    "
                                 android:gravity="center"
                                 android:layout_margin="16dp" />
 
@@ -287,6 +287,8 @@
 
 
             <LinearLayout
+                android:id="@+id/physics_question2"
+                android:animateLayoutChanges="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -420,6 +422,7 @@
 
 
             <LinearLayout
+                android:id="@+id/physics_question1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -557,6 +560,7 @@
 
         </LinearLayout>
     <Button
+        android:id="@+id/button_next_physics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/category_numbers"

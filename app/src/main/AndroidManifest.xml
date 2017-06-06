@@ -18,13 +18,28 @@
         </activity>
         <activity
             android:name=".PhysicsActivity"
-            android:label="Physical Sciences" />
+            android:label="Physical Sciences"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name=".MathActivity"
-            android:label="Mathematics" />
+            android:label="Mathematics"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name=".EnglishActivity"
-            android:label="English" />
+            android:label="English"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
