@@ -53,10 +53,12 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/eradiogroup_q1"
 
                         >
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q1o1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="A. Are they"
@@ -65,6 +67,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q1o2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text=" B. Is it "
@@ -72,6 +75,7 @@
                             style="@style/CategoryStyle"
                             />
                         <RadioButton
+                            android:id="@+id/eradiobutton_q1o3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="C. Are there"
@@ -80,6 +84,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q1o4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="D.Is"
@@ -99,7 +104,8 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
 
                 <LinearLayout
@@ -131,9 +137,11 @@
 
                     <RadioGroup
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eradiogroup_q2">
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q2o1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="A. Ten and a quarter."
@@ -142,6 +150,7 @@
                             style="@style/CategoryStyle"/>
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q2o2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="B.Ten minus the quarter"
@@ -150,6 +159,7 @@
                             style="@style/CategoryStyle"
                             />
                         <RadioButton
+                            android:id="@+id/eradiobutton_q2o3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="C. A quarter past ten."
@@ -159,6 +169,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q2o4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="D. Fifteen after ten o'clock."
@@ -208,10 +219,12 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/eradiogroup_q3"
 
                         >
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q3o1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="A. In the"
@@ -220,6 +233,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q3o2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="B. In"
@@ -227,6 +241,7 @@
                             style="@style/CategoryStyle"
                             />
                         <RadioButton
+                            android:id="@+id/eradiobutton_q3o3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="C. The"
@@ -235,6 +250,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q3o4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="D. At the"
@@ -288,10 +304,12 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/eradiogroup_q4"
 
                         >
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q4o1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="A. Do houses cost"
@@ -300,6 +318,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q4o2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="B. Does houses cost"
@@ -307,6 +326,7 @@
                             style="@style/CategoryStyle"
                             />
                         <RadioButton
+                            android:id="@+id/eradiobutton_q4o3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="C. Does cost houses"
@@ -315,6 +335,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q4o4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="D. Do cost house"
@@ -367,10 +388,12 @@
                     <RadioGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/eradiogroup_q5"
 
                         >
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q5o1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="A. At"
@@ -379,6 +402,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q5o2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="B. In"
@@ -386,6 +410,7 @@
                             style="@style/CategoryStyle"
                             />
                         <RadioButton
+                            android:id="@+id/eradiobutton_q5o3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="C. On"
@@ -394,6 +419,7 @@
                             />
 
                         <RadioButton
+                            android:id="@+id/eradiobutton_q5o4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="D. The"

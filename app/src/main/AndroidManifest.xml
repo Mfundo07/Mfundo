@@ -16,12 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PhysicsActivity"
-            android:label="Physical Sciences"/>
-        <activity android:name=".MathActivity"
-            android:label="Mathematics"/>
-        <activity android:name=".EnglishActivity"
-            android:label="English"/>
+        <activity
+            android:name=".PhysicsActivity"
+            android:label="Physical Sciences" />
+        <activity
+            android:name=".MathActivity"
+            android:label="Mathematics" />
+        <activity
+            android:name=".EnglishActivity"
+            android:label="English" />
     </application>
 
 </manifest>
