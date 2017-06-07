@@ -1,37 +1,19 @@
 package com.example.android.popquiz;
 
-import android.animation.LayoutTransition;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.content.DialogInterface;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.IdRes;
-import android.support.transition.Fade;
-import android.support.transition.Scene;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.HorizontalScrollView;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewFlipper;
-
-import org.w3c.dom.Text;
-
-import static android.R.attr.button;
-import static android.R.attr.targetId;
-import static android.R.attr.thickness;
-import static com.example.android.popquiz.R.id.physics_question1;
-import static com.example.android.popquiz.R.id.radio_button2_a1;
-import static com.example.android.popquiz.R.id.transition_current_scene;
 
 public class PhysicsActivity extends AppCompatActivity {
 
     int count = 0;
+    int finalScore = 0;
 
 
 
@@ -40,7 +22,7 @@ public class PhysicsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physics);
 
-        Button physicsNextButton = (Button) findViewById(R.id.button_next_physics);
+        final Button physicsNextButton = (Button) findViewById(R.id.button_next_physics);
         final Button question1option1 = (Button) findViewById(R.id.physics_question1_option1);
         final Button question1option2 = (Button) findViewById(R.id.physics_question1_option2);
         final Button question1option3 = (Button) findViewById(R.id.physics_question1_option3);
@@ -73,7 +55,39 @@ public class PhysicsActivity extends AppCompatActivity {
                 if (count <= 4){
                 vf.showPrevious();}
                 else{
+
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(PhysicsActivity.this);
+
+                    // set title
+                    alertDialogBuilder.setTitle("Your Title");
+
+                    // set dialog message
+                    alertDialogBuilder
+                            .setMessage("You got: " + ((finalScore/5)*100)+ "%  of the questions correct!\n\nClick Yes (to exit)   or No (to try again)!")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    // if this button is clicked, close
+                                    // current activity
+                                    PhysicsActivity.this.finish();
+                                }
+                            })
+                            .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    // if this button is clicked, just close
+                                    // the dialog box and do nothing
+                                    dialog.cancel();
+                                }
+                            });
+
+                    // create alert dialog
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+
+                    // show it
+                    alertDialog.show();
+
                     vf.stopFlipping();
+
                 }
 
 
@@ -87,6 +101,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question1option2.setEnabled(false);
                 question1option3.setEnabled(false);
                 question1option4.setEnabled(false);
+                //finalScore++;
             }
         });
 
@@ -98,6 +113,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question1option1.setEnabled(false);
                 question1option3.setEnabled(false);
                 question1option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -109,6 +125,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question1option2.setEnabled(false);
                 question1option1.setEnabled(false);
                 question1option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -120,6 +137,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question1option2.setEnabled(false);
                 question1option3.setEnabled(false);
                 question1option1.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -131,6 +149,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option2.setEnabled(false);
                 question2option3.setEnabled(false);
                 question2option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -142,6 +161,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option1.setEnabled(false);
                 question2option3.setEnabled(false);
                 question2option4.setEnabled(false);
+                finalScore++;
             }
         });
         question2option3.setOnClickListener(new View.OnClickListener() {
@@ -152,6 +172,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option2.setEnabled(false);
                 question2option1.setEnabled(false);
                 question2option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -163,6 +184,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option2.setEnabled(false);
                 question2option3.setEnabled(false);
                 question2option1.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -174,6 +196,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option2.setEnabled(false);
                 question3option3.setEnabled(false);
                 question3option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -185,6 +208,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option1.setEnabled(false);
                 question3option3.setEnabled(false);
                 question3option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -196,6 +220,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option2.setEnabled(false);
                 question3option1.setEnabled(false);
                 question3option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -207,6 +232,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option2.setEnabled(false);
                 question3option3.setEnabled(false);
                 question3option1.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -218,6 +244,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option2.setEnabled(false);
                 question4option3.setEnabled(false);
                 question4option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -229,6 +256,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option1.setEnabled(false);
                 question4option3.setEnabled(false);
                 question4option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -240,6 +268,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option2.setEnabled(false);
                 question4option1.setEnabled(false);
                 question4option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -251,6 +280,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option2.setEnabled(false);
                 question4option3.setEnabled(false);
                 question4option1.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -262,6 +292,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option2.setEnabled(false);
                 question5option3.setEnabled(false);
                 question5option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -273,6 +304,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option1.setEnabled(false);
                 question5option3.setEnabled(false);
                 question5option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -284,6 +316,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option2.setEnabled(false);
                 question5option1.setEnabled(false);
                 question5option4.setEnabled(false);
+                finalScore++;
             }
         });
 
@@ -295,8 +328,13 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option2.setEnabled(false);
                 question5option3.setEnabled(false);
                 question5option1.setEnabled(false);
+                finalScore++;
+                question5option4.setText(String.valueOf(finalScore));
+                physicsNextButton.setText("Total Score");
             }
         });
+
+
 
 
 
