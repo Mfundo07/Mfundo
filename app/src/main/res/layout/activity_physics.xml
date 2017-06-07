@@ -12,17 +12,22 @@
 
 
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_gravity="center">
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/physics_view_flipper">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
                 android:layout_weight="1">
 
                 <LinearLayout
@@ -33,7 +38,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Question 4"
+                        android:text="Question 1"
                         android:gravity="center"
                         android:layout_margin="16dp"
                         android:textSize="40dp"
@@ -151,11 +156,17 @@
             </LinearLayout>
 
 
+
+
+
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
                 android:layout_weight="1">
 
                 <LinearLayout
@@ -166,7 +177,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Question 3"
+                        android:text="Question 2"
                         android:gravity="center"
                         android:layout_margin="16dp"
                         android:textSize="40dp"
@@ -286,13 +297,15 @@
 
 
 
+
+
             <LinearLayout
                 android:id="@+id/physics_question2"
                 android:animateLayoutChanges="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
                 android:layout_weight="1">
 
                 <LinearLayout
@@ -303,7 +316,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Question 2"
+                        android:text="Question 3"
                         android:gravity="center"
                         android:layout_margin="16dp"
                         android:textSize="40dp"
@@ -432,12 +445,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                  >
+                    >
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Question 1"
+                        android:text="Question 4"
                         android:gravity="center"
                         android:layout_margin="16dp"
                         android:textSize="40dp"
@@ -555,10 +568,19 @@
 
             </LinearLayout>
 
+            </ViewFlipper>
+
 
 
 
         </LinearLayout>
+
+
+
+
+
+
+
     <Button
         android:id="@+id/button_next_physics"
         android:layout_width="wrap_content"
