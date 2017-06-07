@@ -53,14 +53,14 @@ public class MathActivity extends AppCompatActivity {
                 boolean checkButton4 = radioBquest4.isChecked();
 
 
-                if(checkButton2 == true){
+                if(checkButton2){
                     if(checkButton1 == false || checkButton3 == false || checkButton4 == false ){
                     Toast.makeText(getApplicationContext(), "Correct!",
                              Toast.LENGTH_LONG).show();
 
                     scoreCard  = 10;
                     radioBquest2.setTextColor(Color.GREEN);
-                    radioBquest3.setTextColor(Color.RED);
+                    radioBquest3.setEnabled(false);
                     radioBquest4.setTextColor(Color.RED);
                     radioBquest1.setTextColor(Color.RED);
                     }
