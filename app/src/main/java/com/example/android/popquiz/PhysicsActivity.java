@@ -13,8 +13,8 @@ import android.widget.ViewFlipper;
 public class PhysicsActivity extends AppCompatActivity {
 
     int count = 0;
-    int finalScore = 0;
 
+    int finalScore = 0;
 
 
     @Override
@@ -53,13 +53,14 @@ public class PhysicsActivity extends AppCompatActivity {
               ViewFlipper  vf = (ViewFlipper) findViewById(R.id.physics_view_flipper);
                 count++;
                 if (count <= 4){
+
                 vf.showPrevious();}
                 else{
 
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(PhysicsActivity.this);
 
                     // set title
-                    alertDialogBuilder.setTitle("Your Title");
+                    alertDialogBuilder.setTitle("CONGRATULATIONS!");
 
                     // set dialog message
                     alertDialogBuilder
@@ -77,6 +78,7 @@ public class PhysicsActivity extends AppCompatActivity {
                                     // if this button is clicked, just close
                                     // the dialog box and do nothing
                                     dialog.cancel();
+                                    PhysicsActivity.this.recreate();
                                 }
                             });
 
@@ -113,7 +115,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question1option1.setEnabled(false);
                 question1option3.setEnabled(false);
                 question1option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -125,7 +127,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question1option2.setEnabled(false);
                 question1option1.setEnabled(false);
                 question1option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -149,7 +151,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option2.setEnabled(false);
                 question2option3.setEnabled(false);
                 question2option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -161,7 +163,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option1.setEnabled(false);
                 question2option3.setEnabled(false);
                 question2option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
         question2option3.setOnClickListener(new View.OnClickListener() {
@@ -172,7 +174,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question2option2.setEnabled(false);
                 question2option1.setEnabled(false);
                 question2option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -196,7 +198,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option2.setEnabled(false);
                 question3option3.setEnabled(false);
                 question3option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -220,7 +222,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option2.setEnabled(false);
                 question3option1.setEnabled(false);
                 question3option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -232,7 +234,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question3option2.setEnabled(false);
                 question3option3.setEnabled(false);
                 question3option1.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -244,7 +246,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option2.setEnabled(false);
                 question4option3.setEnabled(false);
                 question4option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -256,7 +258,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option1.setEnabled(false);
                 question4option3.setEnabled(false);
                 question4option4.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -280,7 +282,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question4option2.setEnabled(false);
                 question4option3.setEnabled(false);
                 question4option1.setEnabled(false);
-                finalScore++;
+                //finalScore++;
             }
         });
 
@@ -292,6 +294,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option2.setEnabled(false);
                 question5option3.setEnabled(false);
                 question5option4.setEnabled(false);
+                physicsNextButton.setText("Total Score");
                 finalScore++;
             }
         });
@@ -304,7 +307,8 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option1.setEnabled(false);
                 question5option3.setEnabled(false);
                 question5option4.setEnabled(false);
-                finalScore++;
+                physicsNextButton.setText("Total Score");
+                //finalScore++;
             }
         });
 
@@ -316,7 +320,8 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option2.setEnabled(false);
                 question5option1.setEnabled(false);
                 question5option4.setEnabled(false);
-                finalScore++;
+                physicsNextButton.setText("Total Score");
+                //finalScore++;
             }
         });
 
@@ -328,7 +333,7 @@ public class PhysicsActivity extends AppCompatActivity {
                 question5option2.setEnabled(false);
                 question5option3.setEnabled(false);
                 question5option1.setEnabled(false);
-                finalScore++;
+                //finalScore++;
                 question5option4.setText(String.valueOf(finalScore));
                 physicsNextButton.setText("Total Score");
             }
