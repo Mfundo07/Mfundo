@@ -30,7 +30,7 @@
     <color name="category_maths">#379237</color>
 
     <!-- Background color for the colors category -->
-    <color name="category_colors">#8800A0</color>
+    <color name="category_colors">#00FF00</color>
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>

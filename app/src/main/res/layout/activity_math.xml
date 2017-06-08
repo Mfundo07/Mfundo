@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,464 +12,734 @@
 
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-       >
-
-
-
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/question1View"
-        android:background="@color/category_colors"
-        android:layout_margin="16dp"
+        android:orientation="horizontal"
         android:layout_gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Question 1"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:textSize="50dp"
-            style="@style/CategoryStyle"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/maths_question1"
-            android:textSize="15dp"
-            android:layout_margin="16dp"
-            style="@style/CategoryStyle"/>
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/maths_groupq1"
-
-            >
-
-            <RadioButton
-                android:id="@+id/radio_button1_a1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="A. 25.30"
-                android:layout_margin="4dp"
-                style="@style/CategoryStyle"
-                />
-
-            <RadioButton
-                android:id="@+id/radio_button1_a2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=" B. 25.5"
-                android:layout_margin="4dp"
-                style="@style/CategoryStyle"
-                />
-            <RadioButton
-                android:id="@+id/radio_button1_a3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="C. 25.00"
-                android:layout_margin="4dp"
-                style="@style/CategoryStyle"
-                />
-
-            <RadioButton
-                android:id="@+id/radio_button1_a4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="D. 12.25"
-                style="@style/CategoryStyle"
-                android:layout_margin="4dp"
-                />
-
-
-
-        </RadioGroup>
-
-
-
-    </LinearLayout>
-
-</ScrollView>
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/question2View"
-            android:layout_margin="16dp"
-            android:background="@color/category_colors"
-           android:layout_gravity="center"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Question 2"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:textSize="50dp"
-                style="@style/CategoryStyle"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/maths_question2"
-                android:textSize="15dp"
-                android:layout_margin="16dp"
-                style="@style/CategoryStyle"/>
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/maths_groupq2">
-
-                <RadioButton
-                    android:id="@+id/radio_button2_a1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="A. 1/55"
-                    android:padding="16dp"
-                    android:layout_margin="4dp"
-                    style="@style/CategoryStyle"/>
-
-                <RadioButton
-                    android:id="@+id/radio_button2_a2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="B. 55"
-                    android:padding="16dp"
-                    android:layout_margin="4dp"
-                    style="@style/CategoryStyle"
-                    />
-                <RadioButton
-                    android:id="@+id/radio_button2_a3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="C. 3/11"
-                    android:padding="16dp"
-                    android:layout_margin="4dp"
-                    style="@style/CategoryStyle"
-                    />
-
-                <RadioButton
-                    android:id="@+id/radio_button2_a4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="D. 1/11"
-                    android:padding="16dp"
-                    android:layout_margin="4dp"
-                    style="@style/CategoryStyle"
-                    />
-
-
-
-            </RadioGroup>
-
-
-
-        </LinearLayout>
-        </ScrollView>
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:id="@+id/question3View"
-                android:background="@color/category_colors"
-                android:layout_margin="16dp"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question 3"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
-                    android:textSize="50dp"
-                    style="@style/CategoryStyle"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/maths_question3"
-                    android:textSize="15dp"
-                    android:layout_margin="16dp"
-                    style="@style/CategoryStyle"/>
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/maths_groupq3"
-                    >
-
-                    <RadioButton
-                        android:id="@+id/radio_button3_a1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="A. 149"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radio_button3_a2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="B. 166"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-                    <RadioButton
-                        android:id="@+id/radio_button3_a3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="C. 150"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radio_button3_a4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="D. 151"
-                        style="@style/CategoryStyle"
-                        android:layout_margin="4dp"
-                        />
-
-
-
-                </RadioGroup>
-
-
-
-            </LinearLayout>
-
-
-
-        </ScrollView>
-
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:id="@+id/question4View"
-                android:background="@color/category_colors"
-                android:layout_margin="16dp"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question 4"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
-                    android:textSize="50dp"
-                    style="@style/CategoryStyle"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/maths_question4"
-                    android:textSize="15dp"
-                    android:layout_margin="16dp"
-                    style="@style/CategoryStyle"/>
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/maths_groupq4"
-
-                    >
-
-                    <RadioButton
-                        android:id="@+id/radio_button4_a1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="A. 52"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radio_button4_a2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="B. 502"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-                    <RadioButton
-                        android:id="@+id/radio_button4_a3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="C. 520"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radio_button4_a4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="D. 5002"
-                        style="@style/CategoryStyle"
-                        android:layout_margin="4dp"
-                        />
-
-
-
-                </RadioGroup>
-
-
-
-            </LinearLayout>
-
-
-        </ScrollView>
-
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:id="@+id/question5View"
-                android:background="@color/category_colors"
-                android:layout_margin="16dp"
-               android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Question 5"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
-                    android:textSize="50dp"
-                    style="@style/CategoryStyle"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/maths_question5"
-                    android:textSize="15dp"
-                    android:layout_margin="16dp"
-                    style="@style/CategoryStyle"/>
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/maths_groupq5"
-                    >
-
-                    <RadioButton
-                        android:id="@+id/radio_button5_a1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="A. 78"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radio_button5_a2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="B. 136"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-                    <RadioButton
-                        android:id="@+id/radio_button5_a3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="C. 156"
-                        android:layout_margin="4dp"
-                        style="@style/CategoryStyle"
-                        />
-
-                    <RadioButton
-                        android:id="@+id/radio_button5_a4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="D. 196"
-                        style="@style/CategoryStyle"
-                        android:layout_margin="4dp"
-                        />
-
-
-
-                </RadioGroup>
-
-
-
-            </LinearLayout>
-
-
-
-        </ScrollView>
-
-        <LinearLayout
+        <ViewFlipper
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/scoreView"
-            android:background="@color/category_colors"
-            android:layout_margin="16dp"
-            android:layout_gravity="center">
+            android:id="@+id/maths_view_flipper">
 
-            <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 1"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/maths_question1"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question1_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="25.3"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/maths_question1_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="25.5"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question1_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="25.0"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question1_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="12.25"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Final Score"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:textSize="50dp"
-                style="@style/CategoryStyle"/>
+                android:orientation="vertical"
+                android:layout_gravity="center">
 
-            <TextView
-                android:id="@+id/final_score"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 5"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/maths_question5"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question5_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="78"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/maths_question5_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_colors"
+                                android:text="136"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question5_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="156"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question5_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="196"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 4"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/maths_question4"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question4_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="52"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/maths_question4_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_colors"
+                                android:text="502"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question4_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="520"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question4_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="5002"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/maths_question2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:textSize="100dp"
-                style="@style/CategoryStyle"/>
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 3"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/maths_question3"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question3_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="149"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/maths_question3_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_colors"
+                                android:text="166"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
 
 
 
-        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question3_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="150"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question3_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="151"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/maths_question1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 2"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/maths_question2"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question2_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="1/55"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/maths_question2_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_colors"
+                                android:text="55"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question2_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="3/11"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/maths_question2_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_colors"
+                                android:text="1/11"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ViewFlipper>
+
 
 
 
@@ -481,12 +751,33 @@
 
 
 
+    <Button
+        android:id="@+id/button_next_maths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/category_colors"
+        style="@style/CategoryStyle"
+        android:text="Next"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"/>
 
-    </ScrollView>
 
 
 
-</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
 
 
 

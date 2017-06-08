@@ -1,5 +1,8 @@
 package com.example.android.popquiz;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
@@ -14,405 +17,376 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import static android.os.Build.VERSION_CODES.M;
 
 public class MathActivity extends AppCompatActivity {
-    int scoreCard = 0;
+    int count = 0;
+
+    double finalScore = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math);
 
+        final Button mathsNextButton = (Button) findViewById(R.id.button_next_maths);
+        final Button question1option1 = (Button) findViewById(R.id.maths_question1_option1);
+        final Button question1option2 = (Button) findViewById(R.id.maths_question1_option2);
+        final Button question1option3 = (Button) findViewById(R.id.maths_question1_option3);
+        final Button question1option4 = (Button) findViewById(R.id.maths_question1_option4);
+        final Button question2option1 = (Button) findViewById(R.id.maths_question2_option1);
+        final Button question2option2 = (Button) findViewById(R.id.maths_question2_option2);
+        final Button question2option3 = (Button) findViewById(R.id.maths_question2_option3);
+        final Button question2option4 = (Button) findViewById(R.id.maths_question2_option4);
+        final Button question3option1 = (Button) findViewById(R.id.maths_question3_option1);
+        final Button question3option2 = (Button) findViewById(R.id.maths_question3_option2);
+        final Button question3option3 = (Button) findViewById(R.id.maths_question3_option3);
+        final Button question3option4 = (Button) findViewById(R.id.maths_question3_option4);
+        final Button question4option1 = (Button) findViewById(R.id.maths_question4_option1);
+        final Button question4option2 = (Button) findViewById(R.id.maths_question4_option2);
+        final Button question4option3 = (Button) findViewById(R.id.maths_question4_option3);
+        final Button question4option4 = (Button) findViewById(R.id.maths_question4_option4);
+        final Button question5option1 = (Button) findViewById(R.id.maths_question5_option1);
+        final Button question5option2 = (Button) findViewById(R.id.maths_question5_option2);
+        final Button question5option3 = (Button) findViewById(R.id.maths_question5_option3);
+        final Button question5option4 = (Button) findViewById(R.id.maths_question5_option4);
 
 
 
 
 
-
-
-
-
-
-
-        RadioGroup group1q = (RadioGroup) findViewById(R.id.maths_groupq1);
-
-        group1q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-            RadioButton radioBquest1 = (RadioButton) findViewById(R.id.radio_button1_a1);
-            RadioButton radioBquest2 = (RadioButton) findViewById(R.id.radio_button1_a2);
-            RadioButton radioBquest3 = (RadioButton) findViewById(R.id.radio_button1_a3);
-            RadioButton radioBquest4 = (RadioButton) findViewById(R.id.radio_button1_a4);
-
+        mathsNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                boolean checkButton2 = radioBquest2.isChecked();
-                boolean checkButton1 = radioBquest1.isChecked();
-                boolean checkButton3 = radioBquest3.isChecked();
-                boolean checkButton4 = radioBquest4.isChecked();
+            public void onClick(View v) {
+                ViewFlipper vf = (ViewFlipper) findViewById(R.id.maths_view_flipper);
 
 
-                if(checkButton2){
-                    if(checkButton1 == false || checkButton3 == false || checkButton4 == false ){
-                    Toast.makeText(getApplicationContext(), "Correct!",
-                             Toast.LENGTH_LONG).show();
 
-                    scoreCard  = 10;
-                    radioBquest2.setTextColor(Color.GREEN);
-                    radioBquest3.setEnabled(false);
-                    radioBquest4.setTextColor(Color.RED);
-                    radioBquest1.setTextColor(Color.RED);
-                    }
+                count++;
 
-                    else{
-                        scoreCard = 0;
-                    }
+                if (count <= 4){
+
+                    vf.showPrevious();}
+                else{
+
+                    vf.stopFlipping();
 
                 }
-                if(checkButton1 == true){
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                    scoreCard += 0;
-                    radioBquest2.setTextColor(Color.GREEN);
-                    radioBquest3.setTextColor(Color.RED);
-                    radioBquest4.setTextColor(Color.RED);
-                    radioBquest1.setTextColor(Color.RED);
-
-                }
-                if(checkButton3 == true){
-                    if(checkButton2 == false){
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioBquest2.setTextColor(Color.GREEN);
-                        radioBquest3.setTextColor(Color.RED);
-                        radioBquest4.setTextColor(Color.RED);
-                        radioBquest1.setTextColor(Color.RED);
-                    }
-                }
-                if(checkButton4 == true){
-                    if(checkButton2 == false){
-
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioBquest2.setTextColor(Color.GREEN);
-                        radioBquest3.setTextColor(Color.RED);
-                        radioBquest4.setTextColor(Color.RED);
-                        radioBquest1.setTextColor(Color.RED);
-                    }
-                }
-                TextView finalScoreView = (TextView) findViewById(R.id.final_score);
-                finalScoreView.setText(String.valueOf(scoreCard));
 
 
+            }
+        });
+        question1option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question1option1.setBackgroundColor(Color.CYAN);
+                question1option1.setEnabled(false);
+                question1option2.setEnabled(false);
+                question1option3.setEnabled(false);
+                question1option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question1option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question1option2.setBackgroundColor(Color.CYAN);
+                question1option2.setEnabled(false);
+                question1option1.setEnabled(false);
+                question1option3.setEnabled(false);
+                question1option4.setEnabled(false);
+                finalScore++;
+            }
+        });
+
+        question1option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question1option3.setBackgroundColor(Color.CYAN);
+                question1option3.setEnabled(false);
+                question1option2.setEnabled(false);
+                question1option1.setEnabled(false);
+                question1option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question1option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question1option4.setBackgroundColor(Color.CYAN);
+                question1option4.setEnabled(false);
+                question1option2.setEnabled(false);
+                question1option3.setEnabled(false);
+                question1option1.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question2option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question2option1.setBackgroundColor(Color.CYAN);
+                question2option1.setEnabled(false);
+                question2option2.setEnabled(false);
+                question2option3.setEnabled(false);
+                question2option4.setEnabled(false);
+                finalScore++;
+            }
+        });
+
+        question2option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question2option2.setBackgroundColor(Color.CYAN);
+                question2option2.setEnabled(false);
+                question2option1.setEnabled(false);
+                question2option3.setEnabled(false);
+                question2option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+        question2option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question2option3.setBackgroundColor(Color.CYAN);
+                question2option3.setEnabled(false);
+                question2option2.setEnabled(false);
+                question2option1.setEnabled(false);
+                question2option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question2option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question2option4.setBackgroundColor(Color.CYAN);
+                question2option4.setEnabled(false);
+                question2option2.setEnabled(false);
+                question2option3.setEnabled(false);
+                question2option1.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question3option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question3option1.setBackgroundColor(Color.CYAN);
+                question3option1.setEnabled(false);
+                question3option2.setEnabled(false);
+                question3option3.setEnabled(false);
+                question3option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question3option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question3option2.setBackgroundColor(Color.CYAN);
+                question3option2.setEnabled(false);
+                question3option1.setEnabled(false);
+                question3option3.setEnabled(false);
+                question3option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question3option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question3option3.setBackgroundColor(Color.CYAN);
+                question3option3.setEnabled(false);
+                question3option2.setEnabled(false);
+                question3option1.setEnabled(false);
+                question3option4.setEnabled(false);
+                finalScore++;
+            }
+        });
+
+        question3option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question3option4.setBackgroundColor(Color.CYAN);
+                question3option4.setEnabled(false);
+                question3option2.setEnabled(false);
+                question3option3.setEnabled(false);
+                question3option1.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question4option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question4option1.setBackgroundColor(Color.CYAN);
+                question4option1.setEnabled(false);
+                question4option2.setEnabled(false);
+                question4option3.setEnabled(false);
+                question4option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question4option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question4option2.setBackgroundColor(Color.CYAN);
+                question4option2.setEnabled(false);
+                question4option1.setEnabled(false);
+                question4option3.setEnabled(false);
+                question4option4.setEnabled(false);
+                finalScore++;
+            }
+        });
+
+        question4option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question4option3.setBackgroundColor(Color.CYAN);
+                question4option3.setEnabled(false);
+                question4option2.setEnabled(false);
+                question4option1.setEnabled(false);
+                question4option4.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question4option4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                question4option4.setBackgroundColor(Color.CYAN);
+                question4option4.setEnabled(false);
+                question4option2.setEnabled(false);
+                question4option3.setEnabled(false);
+                question4option1.setEnabled(false);
+                //finalScore++;
+            }
+        });
+
+        question5option1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mathsNextButton.setVisibility(View.GONE);
+                question5option1.setBackgroundColor(Color.CYAN);
+                question5option1.setEnabled(false);
+                question5option2.setEnabled(false);
+                question5option3.setEnabled(false);
+                question5option4.setEnabled(false);
+                //finalScore++;
+                returnScore(finalScore);
+
+            }
+        });
+
+        question5option2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mathsNextButton.setVisibility(View.GONE);
+                question5option2.setBackgroundColor(Color.CYAN);
+                question5option2.setEnabled(false);
+                question5option1.setEnabled(false);
+                question5option3.setEnabled(false);
+                question5option4.setEnabled(false);
+                //finalScore++;
+                returnScore(finalScore);
+
+            }
+        });
+
+        question5option3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mathsNextButton.setVisibility(View.GONE);
+                question5option3.setBackgroundColor(Color.CYAN);
+                question5option3.setEnabled(false);
+                question5option2.setEnabled(false);
+                question5option1.setEnabled(false);
+                question5option4.setEnabled(false);
+                finalScore++;
+                returnScore(finalScore);
 
 
             }
         });
 
-        RadioGroup group2q = (RadioGroup) findViewById(R.id.maths_groupq2);
-
-        group2q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-            RadioButton radioB2quest1 = (RadioButton) findViewById(R.id.radio_button2_a1);
-            RadioButton radioB2quest2 = (RadioButton) findViewById(R.id.radio_button2_a2);
-            RadioButton radioB2quest3 = (RadioButton) findViewById(R.id.radio_button2_a3);
-            RadioButton radioB2quest4 = (RadioButton) findViewById(R.id.radio_button2_a4);
-
+        question5option4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                boolean checkButton2 = radioB2quest2.isChecked();
-                boolean checkButton1 = radioB2quest1.isChecked();
-                boolean checkButton3 = radioB2quest3.isChecked();
-                boolean checkButton4 = radioB2quest4.isChecked();
-
-
-                if(checkButton1 == true){
-                    if(checkButton3 == false || checkButton2 == false || checkButton4 == false ){
-                        scoreCard += 10;
-                        Toast.makeText(getApplicationContext(), "Correct!",
-                                Toast.LENGTH_LONG).show();
-
-                        radioB2quest1.setTextColor(Color.GREEN);
-                        radioB2quest3.setTextColor(Color.RED);
-                        radioB2quest4.setTextColor(Color.RED);
-                        radioB2quest2.setTextColor(Color.RED);
-                    }
-
-                    else{
-                        scoreCard = 0;
-                    }
-
-                }
-                if(checkButton2 == true){
-                    Toast.makeText(getApplicationContext(), "Incorrect!",
-                            Toast.LENGTH_LONG).show();
-                    scoreCard += 0;
-                    radioB2quest1.setTextColor(Color.GREEN);
-                    radioB2quest2.setTextColor(Color.RED);
-                    radioB2quest4.setTextColor(Color.RED);
-                    radioB2quest3.setTextColor(Color.RED);
-
-                }
-                if(checkButton3 == true){
-                    if(checkButton1 == false){
-
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB2quest1.setTextColor(Color.GREEN);
-                        radioB2quest2.setTextColor(Color.RED);
-                        radioB2quest4.setTextColor(Color.RED);
-                        radioB2quest3.setTextColor(Color.RED);}
-
-                }
-                if(checkButton4 == true){
-                    if(checkButton1 == false){
-
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB2quest1.setTextColor(Color.GREEN);
-                        radioB2quest3.setTextColor(Color.RED);
-                        radioB2quest4.setTextColor(Color.RED);
-                        radioB2quest2.setTextColor(Color.RED);}
-
-                }
-                TextView finalScoreView = (TextView) findViewById(R.id.final_score);
-                finalScoreView.setText(String.valueOf(scoreCard));
-
-
+            public void onClick(View v) {
+                mathsNextButton.setVisibility(View.GONE);
+                question5option4.setBackgroundColor(Color.CYAN);
+                question5option4.setEnabled(false);
+                question5option2.setEnabled(false);
+                question5option3.setEnabled(false);
+                question5option1.setEnabled(false);
+                returnScore(finalScore);
 
 
             }
         });
 
-        RadioGroup group3q = (RadioGroup) findViewById(R.id.maths_groupq3);
-
-        group3q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-            RadioButton radioB3quest1 = (RadioButton) findViewById(R.id.radio_button3_a1);
-            RadioButton radioB3quest2 = (RadioButton) findViewById(R.id.radio_button3_a2);
-            RadioButton radioB3quest3 = (RadioButton) findViewById(R.id.radio_button3_a3);
-            RadioButton radioB3quest4 = (RadioButton) findViewById(R.id.radio_button3_a4);
-
-            @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                boolean checkButton2 = radioB3quest2.isChecked();
-                boolean checkButton1 = radioB3quest1.isChecked();
-                boolean checkButton3 = radioB3quest3.isChecked();
-                boolean checkButton4 = radioB3quest4.isChecked();
 
 
-                if(checkButton3 == true){
-                    if(checkButton1 == false || checkButton2 == false || checkButton4 == false ){
-                        scoreCard += 10;
-                        Toast.makeText(getApplicationContext(), "Correct!",
-                                Toast.LENGTH_LONG).show();
 
 
-                        radioB3quest3.setTextColor(Color.GREEN);
-                        radioB3quest2.setTextColor(Color.RED);
-                        radioB3quest4.setTextColor(Color.RED);
-                        radioB3quest1.setTextColor(Color.RED);
+
+    }
+
+    public void returnScore(double Score){
+        double score = Score;
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MathActivity.this);
+
+        // set title
+        alertDialogBuilder.setTitle("Mathematics Quiz!");
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("You got: " + (int)((score/5)*100)+ "% of the questions correct!")
+                .setCancelable(false)
+                .setPositiveButton("Exit",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, close
+                        // current activity
+                        MathActivity.this.finish();
                     }
-
-                    else{
-                        scoreCard = 0;
+                })
+                .setNegativeButton("Try Again",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        dialog.cancel();
+                        MathActivity.this.recreate();
                     }
+                });
 
-                }
-                if(checkButton1 == true){
-                    Toast.makeText(getApplicationContext(), "Incorrect!",
-                            Toast.LENGTH_LONG).show();
-                    scoreCard += 0;
-                    radioB3quest3.setTextColor(Color.GREEN);
-                    radioB3quest2.setTextColor(Color.RED);
-                    radioB3quest4.setTextColor(Color.RED);
-                    radioB3quest1.setTextColor(Color.RED);
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
 
-                }
-                if(checkButton2 == true){
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB3quest3.setTextColor(Color.GREEN);
-                        radioB3quest2.setTextColor(Color.RED);
-                        radioB3quest4.setTextColor(Color.RED);
-                        radioB3quest1.setTextColor(Color.RED);
-
-                }
-                if(checkButton4 == true){
-
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB3quest3.setTextColor(Color.GREEN);
-                        radioB3quest2.setTextColor(Color.RED);
-                        radioB3quest4.setTextColor(Color.RED);
-                        radioB3quest1.setTextColor(Color.RED);
-
-                }
+        // show it
+        alertDialog.show();
 
 
 
 
-            }
-        });
-
-        RadioGroup group4q = (RadioGroup) findViewById(R.id.maths_groupq4);
-
-        group4q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-            RadioButton radioB4quest1 = (RadioButton) findViewById(R.id.radio_button4_a1);
-            RadioButton radioB4quest2 = (RadioButton) findViewById(R.id.radio_button4_a2);
-            RadioButton radioB4quest3 = (RadioButton) findViewById(R.id.radio_button4_a3);
-            RadioButton radioB4quest4 = (RadioButton) findViewById(R.id.radio_button4_a4);
-
-            @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                boolean checkButton2 = radioB4quest2.isChecked();
-                boolean checkButton1 = radioB4quest1.isChecked();
-                boolean checkButton3 = radioB4quest3.isChecked();
-                boolean checkButton4 = radioB4quest4.isChecked();
-
-
-                if(checkButton2 == true){
-                    if(checkButton1 == false || checkButton3 == false || checkButton4 == false ){
-                        scoreCard += 10;
-                        Toast.makeText(getApplicationContext(), "Correct!",
-                                Toast.LENGTH_LONG).show();
-
-
-                        radioB4quest2.setTextColor(Color.GREEN);
-                        radioB4quest3.setTextColor(Color.RED);
-                        radioB4quest4.setTextColor(Color.RED);
-                        radioB4quest1.setTextColor(Color.RED);
-                    }
-
-                    else{
-                        scoreCard = 0;
-                    }
-
-                }
-                if(checkButton1 == true){
-                    Toast.makeText(getApplicationContext(), "Incorrect!",
-                            Toast.LENGTH_LONG).show();
-                    scoreCard += 0;
-                    radioB4quest2.setTextColor(Color.GREEN);
-                    radioB4quest3.setTextColor(Color.RED);
-                    radioB4quest4.setTextColor(Color.RED);
-                    radioB4quest1.setTextColor(Color.RED);
-
-                }
-                if(checkButton3 == true){
-                    if(checkButton2 == false){
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB4quest2.setTextColor(Color.GREEN);
-                        radioB4quest3.setTextColor(Color.RED);
-                        radioB4quest4.setTextColor(Color.RED);
-                        radioB4quest1.setTextColor(Color.RED);
-                    }
-                }
-                if(checkButton4 == true){
-                    if(checkButton2 == false){
-
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB4quest2.setTextColor(Color.GREEN);
-                        radioB4quest3.setTextColor(Color.RED);
-                        radioB4quest4.setTextColor(Color.RED);
-                        radioB4quest1.setTextColor(Color.RED);
-                    }
-                }
-                TextView finalScoreView = (TextView) findViewById(R.id.final_score);
-                finalScoreView.setText(String.valueOf(scoreCard));
 
 
 
 
-            }
-        });
-
-        RadioGroup group5q = (RadioGroup) findViewById(R.id.maths_groupq5);
-
-        group5q.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
-            RadioButton radioB5quest1 = (RadioButton) findViewById(R.id.radio_button5_a1);
-            RadioButton radioB5quest2 = (RadioButton) findViewById(R.id.radio_button5_a2);
-            RadioButton radioB5quest3 = (RadioButton) findViewById(R.id.radio_button5_a3);
-            RadioButton radioB5quest4 = (RadioButton) findViewById(R.id.radio_button5_a4);
-
-            @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                boolean checkButton2 = radioB5quest2.isChecked();
-                boolean checkButton1 = radioB5quest1.isChecked();
-                boolean checkButton3 = radioB5quest3.isChecked();
-                boolean checkButton4 = radioB5quest4.isChecked();
-
-
-                if(checkButton3 == true){
-                    if(checkButton1 == false || checkButton2 == false || checkButton4 == false ){
-                        scoreCard += 10;
-                        Toast.makeText(getApplicationContext(), "Correct!",
-                                Toast.LENGTH_LONG).show();
-
-                        radioB5quest3.setTextColor(Color.GREEN);
-                        radioB5quest2.setTextColor(Color.RED);
-                        radioB5quest4.setTextColor(Color.RED);
-                        radioB5quest1.setTextColor(Color.RED);
-                    }
-
-                    else{
-                        scoreCard = 0;
-                    }
-
-                }
-                if(checkButton1 == true){
-                    Toast.makeText(getApplicationContext(), "Incorrect!",
-                            Toast.LENGTH_LONG).show();
-                    scoreCard += 0;
-                    radioB5quest3.setTextColor(Color.GREEN);
-                    radioB5quest2.setTextColor(Color.RED);
-                    radioB5quest4.setTextColor(Color.RED);
-                    radioB5quest1.setTextColor(Color.RED);
-
-                }
-                if(checkButton2 == true){
-                    if(checkButton3 == false){
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB5quest3.setTextColor(Color.GREEN);
-                        radioB5quest2.setTextColor(Color.RED);
-                        radioB5quest4.setTextColor(Color.RED);
-                        radioB5quest1.setTextColor(Color.RED);
-                    }
-                }
-                if(checkButton4 == true){
-                    if(checkButton3 == false){
-
-                        Toast.makeText(getApplicationContext(), "Incorrect!",
-                                Toast.LENGTH_LONG).show();
-                        scoreCard += 0;
-                        radioB5quest3.setTextColor(Color.GREEN);
-                        radioB5quest2.setTextColor(Color.RED);
-                        radioB5quest4.setTextColor(Color.RED);
-                        radioB5quest1.setTextColor(Color.RED);
-                    }
-                } TextView finalScoreView = (TextView) findViewById(R.id.final_score);
-                finalScoreView.setText(String.valueOf(scoreCard));
 
 
 
 
-            }
-        });
+
+
+
+
+
 
 
     }

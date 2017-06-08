@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,437 +10,757 @@
     tools:context="com.example.android.popquiz.MathActivity"
     >
 
-    <ScrollView
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <ViewFlipper
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:id="@+id/english_view_flipper">
 
-
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/question1View"
-                    android:background="@color/category_phrases"
-                    android:layout_margin="16dp"
-                    android:layout_gravity="center">
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Question 1"
-                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_margin="16dp"
-                        android:textSize="50dp"
+                        android:textSize="40dp"
                         style="@style/CategoryStyle"/>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="wrap_content"
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/english_question1"
-                        android:textSize="15dp"
-                        android:layout_margin="16dp"
-                        style="@style/CategoryStyle"/>
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/eradiogroup_q1"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
 
-                        >
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q1o1"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="A. Are they"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question1_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Are they"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
 
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q1o2"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=" B. Is it "
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q1o3"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/english_question1_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_phrases"
+                                android:text="Is it"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="C. Are there"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question1_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Are there"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
 
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q1o4"
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="D.Is"
-                            style="@style/CategoryStyle"
-                            android:layout_margin="4dp"
-                            />
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question1_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Is"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
 
 
-
-                    </RadioGroup>
-
-
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </ScrollView>
 
-            <ScrollView
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 5"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english_question5"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question5_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="At"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/english_question5_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_phrases"
+                                android:text="In"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question5_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="On"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question5_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="The"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 4"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english_question4"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question4_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Do houses cost"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/english_question4_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_phrases"
+                                android:text="Does cost houses"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question4_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Does houses cost"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question4_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Do cost houses"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/english_question3"
+                android:animateLayoutChanges="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Question 3"
+                        android:gravity="center"
+                        android:layout_margin="16dp"
+                        android:textSize="40dp"
+                        style="@style/CategoryStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english_question3"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question3_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="In the"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/english_question3_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_phrases"
+                                android:text="In"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question3_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="The"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question3_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="At the"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/english_question2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
-
+                android:orientation="vertical"
+                android:layout_gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:id="@+id/question2View"
-                    android:layout_margin="16dp"
-                    android:background="@color/category_phrases"
-                    android:layout_gravity="center"
                     >
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Question 2"
-                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_margin="16dp"
-                        android:textSize="50dp"
+                        android:textSize="40dp"
                         style="@style/CategoryStyle"/>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
-                        android:layout_width="wrap_content"
+                        style="@style/CategoryStyle"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/english_question2"
-                        android:textSize="15dp"
-                        android:layout_margin="16dp"
-                        style="@style/CategoryStyle"/>
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/eradiogroup_q2">
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q2o1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="A. Ten and a quarter."
-                            android:padding="16dp"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"/>
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q2o2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="B.Ten minus the quarter"
-                            android:padding="16dp"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q2o3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="C. A quarter past ten."
-                            android:padding="16dp"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q2o4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="D. Fifteen after ten o'clock."
-                            android:padding="16dp"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-
-
-
-                    </RadioGroup>
-
-
-
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:padding="16dp"
+                        />
                 </LinearLayout>
-            </ScrollView>
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/question3View"
-                    android:background="@color/category_phrases"
-                    android:layout_margin="16dp"
-                    android:layout_gravity="center">
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Question 3"
-                        android:layout_gravity="center"
-                        android:layout_margin="16dp"
-                        android:textSize="50dp"
-                        style="@style/CategoryStyle"/>
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question2_option1"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Ten and a quarter"
+                                android:gravity="center"
+                                android:layout_margin="16dp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/english_question2_option2"
+                                style="@style/CategoryStyle"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:background="@color/category_phrases"
+                                android:text="Ten minus the quarter"
+                                android:layout_margin="16dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/english_question3"
-                        android:textSize="15dp"
-                        android:layout_margin="16dp"
-                        style="@style/CategoryStyle"/>
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center">
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/eradiogroup_q3"
 
-                        >
 
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q3o1"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="A. In the"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question2_option3"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="A quarter past ten"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                />
 
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q3o2"
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="B. In"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q3o3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="C. The"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+                            <Button
+                                android:id="@+id/english_question2_option4"
+                                style="@style/CategoryStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/category_phrases"
+                                android:text="Fifteen after ten o'clock"
+                                android:gravity="center"
+                                android:layout_margin="16dp" />
 
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q3o4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="D. At the"
-                            style="@style/CategoryStyle"
-                            android:layout_margin="4dp"
-                            />
+                        </LinearLayout>
 
 
-
-                    </RadioGroup>
-
-
+                    </LinearLayout>
 
                 </LinearLayout>
 
 
 
-            </ScrollView>
+            </LinearLayout>
 
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/question4View"
-                    android:background="@color/category_phrases"
-                    android:layout_margin="16dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Question 4"
-                        android:layout_gravity="center"
-                        android:layout_margin="16dp"
-                        android:textSize="50dp"
-                        style="@style/CategoryStyle"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/english_question4"
-                        android:textSize="15dp"
-                        android:layout_margin="16dp"
-                        style="@style/CategoryStyle"/>
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/eradiogroup_q4"
-
-                        >
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q4o1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="A. Do houses cost"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q4o2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="B. Does houses cost"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q4o3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="C. Does cost houses"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q4o4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="D. Do cost house"
-                            style="@style/CategoryStyle"
-                            android:layout_margin="4dp"
-                            />
+        </ViewFlipper>
 
 
 
-                    </RadioGroup>
+
+    </LinearLayout>
 
 
 
-                </LinearLayout>
-
-
-            </ScrollView>
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/question5View"
-                    android:background="@color/category_phrases"
-                    android:layout_margin="16dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Question 5"
-                        android:layout_gravity="center"
-                        android:layout_margin="16dp"
-                        android:textSize="50dp"
-                        style="@style/CategoryStyle"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/english_question5"
-                        android:textSize="15dp"
-                        android:layout_margin="16dp"
-                        style="@style/CategoryStyle"/>
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/eradiogroup_q5"
-
-                        >
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q5o1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="A. At"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q5o2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="B. In"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q5o3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="C. On"
-                            android:layout_margin="4dp"
-                            style="@style/CategoryStyle"
-                            />
-
-                        <RadioButton
-                            android:id="@+id/eradiobutton_q5o4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="D. The"
-                            style="@style/CategoryStyle"
-                            android:layout_margin="4dp"
-                            />
 
 
 
-                    </RadioGroup>
 
-
-
-                </LinearLayout>
-
-
-
-            </ScrollView>
-
-
-        </LinearLayout>
+    <Button
+        android:id="@+id/button_next_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/category_phrases"
+        style="@style/CategoryStyle"
+        android:text="Next"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"/>
 
 
 
@@ -449,9 +769,14 @@
 
 
 
-    </ScrollView>
-</LinearLayout>
 
+
+
+
+
+
+
+</RelativeLayout>
 
 
 
