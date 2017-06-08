@@ -28,7 +28,7 @@ public class PhysicsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physics);
 
-        final ArrayList<String> answers = new ArrayList<>();
+
         final Button physicsNextButton = (Button) findViewById(R.id.button_next_physics);
         final Button question1option1 = (Button) findViewById(R.id.physics_question1_option1);
         final Button question1option2 = (Button) findViewById(R.id.physics_question1_option2);
@@ -50,7 +50,7 @@ public class PhysicsActivity extends AppCompatActivity {
         final Button question5option2 = (Button) findViewById(R.id.physics_question5_option2);
         final Button question5option3 = (Button) findViewById(R.id.physics_question5_option3);
         final Button question5option4 = (Button) findViewById(R.id.physics_question5_option4);
-        answers.add(String.valueOf(question1option3.getText()));
+
 
 
 
@@ -345,7 +345,7 @@ public class PhysicsActivity extends AppCompatActivity {
 
         // set dialog message
         alertDialogBuilder
-                .setMessage("You got: " + (int)((score/5)*100)+ "%  of the questions correct!")
+                .setMessage("You got: " + (int)((score/5)*100)+ "% of the questions correct!")
                 .setCancelable(false)
                 .setPositiveButton("Exit",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
