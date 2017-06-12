@@ -79,11 +79,11 @@
                             <Button
                                 android:id="@+id/physics_question1_option1"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
                                 android:text="Decreases, rises"
-                                android:layout_gravity="center"
+                                android:gravity="center"
                                 android:layout_margin="16dp"
 
                                 />
@@ -99,11 +99,11 @@
                                 android:id="@+id/physics_question1_option2"
                                 style="@style/CategoryStyle"
                                 android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:background="@color/category_numbers"
                                 android:text="Increases, falls"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"/>
+                                android:gravity="center"/>
                         </LinearLayout>
 
 
@@ -125,12 +125,12 @@
                             <Button
                                 android:id="@+id/physics_question1_option3"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
                                 android:text="Increases, rises"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"
+                                android:gravity="center"
                                 />
 
                         </LinearLayout>
@@ -142,7 +142,7 @@
                             <Button
                                 android:id="@+id/physics_question1_option4"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
                                 android:text="Decreases, falls"
@@ -231,11 +231,11 @@
                                 <Button
                                     android:id="@+id/physics_question5_option1"
                                     style="@style/CategoryStyle"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@color/category_numbers"
-                                    android:text="    Condensation    "
-                                    android:layout_gravity="center"
+                                    android:text="Condensation"
+                                    android:gravity="center"
                                     android:layout_margin="16dp"
 
                                     />
@@ -251,11 +251,11 @@
                                     android:id="@+id/physics_question5_option2"
                                     style="@style/CategoryStyle"
                                     android:layout_height="wrap_content"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:background="@color/category_numbers"
-                                    android:text="    Convection    "
+                                    android:text="Convection"
                                     android:layout_margin="16dp"
-                                    android:layout_gravity="center"/>
+                                    android:gravity="center"/>
                             </LinearLayout>
 
 
@@ -277,12 +277,12 @@
                                 <Button
                                     android:id="@+id/physics_question5_option3"
                                     style="@style/CategoryStyle"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@color/category_numbers"
-                                    android:text="    Radiation    "
+                                    android:text="Radiation"
                                     android:layout_margin="16dp"
-                                    android:layout_gravity="center"
+                                    android:gravity="center"
                                     />
 
                             </LinearLayout>
@@ -294,10 +294,10 @@
                                 <Button
                                     android:id="@+id/physics_question5_option4"
                                     style="@style/CategoryStyle"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@color/category_numbers"
-                                    android:text="    Conduction    "
+                                    android:text="Conduction"
                                     android:gravity="center"
                                     android:layout_margin="16dp" />
 
@@ -375,11 +375,11 @@
                             <Button
                                 android:id="@+id/physics_question4_option1"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Decreasing    "
-                                android:layout_gravity="center"
+                                android:text="Decreasing"
+                                android:gravity="center"
                                 android:layout_margin="16dp"
 
                                 />
@@ -395,11 +395,11 @@
                                 android:id="@+id/physics_question4_option2"
                                 style="@style/CategoryStyle"
                                 android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:background="@color/category_numbers"
-                                android:text="    Increasing    "
+                                android:text="Increasing"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"/>
+                                android:gravity="center"/>
                         </LinearLayout>
 
 
@@ -421,12 +421,12 @@
                             <Button
                                 android:id="@+id/physics_question4_option3"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Kinetic    "
+                                android:text="Kinetic"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"
+                                android:gravity="center"
                                 />
 
                         </LinearLayout>
@@ -438,10 +438,10 @@
                             <Button
                                 android:id="@+id/physics_question4_option4"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Potential    "
+                                android:text="Potential"
                                 android:gravity="center"
                                 android:layout_margin="16dp" />
 
@@ -518,11 +518,11 @@
                             <Button
                                 android:id="@+id/physics_question3_option1"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
                                 android:text="Potential Energy"
-                                android:layout_gravity="center"
+                                android:gravity="center"
                                 android:layout_margin="16dp"
 
                                 />
@@ -538,11 +538,11 @@
                                 android:id="@+id/physics_question3_option2"
                                 style="@style/CategoryStyle"
                                 android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:background="@color/category_numbers"
-                                android:text="    Total energy    "
+                                android:text="Total energy"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"/>
+                                android:gravity="center"/>
                         </LinearLayout>
 
 
@@ -564,12 +564,12 @@
                             <Button
                                 android:id="@+id/physics_question3_option3"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Temperature    "
+                                android:text="Temperature"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"
+                                android:gravity="center"
                                 />
 
                         </LinearLayout>
@@ -581,7 +581,7 @@
                             <Button
                                 android:id="@+id/physics_question3_option4"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
                                 android:text="Average kinetic energy"
@@ -656,11 +656,11 @@
                             <Button
                                 android:id="@+id/physics_question2_option1"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Combustion     "
-                                android:layout_gravity="center"
+                                android:text="Combustion"
+                                android:gravity="center"
                                 android:layout_margin="16dp"
 
                                 />
@@ -676,11 +676,11 @@
                                 android:id="@+id/physics_question2_option2"
                                 style="@style/CategoryStyle"
                                 android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:background="@color/category_numbers"
-                                android:text="    Compression    "
+                                android:text="Compression"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"/>
+                                android:gravity="center"/>
                         </LinearLayout>
 
 
@@ -702,12 +702,12 @@
                             <Button
                                 android:id="@+id/physics_question2_option3"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Sublimation    "
+                                android:text="Sublimation"
                                 android:layout_margin="16dp"
-                                android:layout_gravity="center"
+                                android:gravity="center"
                                 />
 
                         </LinearLayout>
@@ -719,10 +719,10 @@
                             <Button
                                 android:id="@+id/physics_question2_option4"
                                 style="@style/CategoryStyle"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/category_numbers"
-                                android:text="    Evaporation    "
+                                android:text="Evaporation"
                                 android:gravity="center"
                                 android:layout_margin="16dp" />
 

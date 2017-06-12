@@ -341,7 +341,7 @@ public class PhysicsActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(PhysicsActivity.this);
 
         // set title
-        alertDialogBuilder.setTitle("CONGRATULATIONS!");
+        alertDialogBuilder.setTitle("Physical Sciences Quiz!");
 
         // set dialog message
         alertDialogBuilder
